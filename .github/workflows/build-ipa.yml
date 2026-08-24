@@ -9,6 +9,9 @@ permissions:
 jobs:
   build:
     runs-on: macos-15
+    env:
+      # Liquid Glass API (glassEffect) требует SDK iOS 26 из Xcode 26
+      DEVELOPER_DIR: /Applications/Xcode_26.3.app
     steps:
       - uses: actions/checkout@v4
 
